@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kulki Newtona: Dokumentacja struktury PendulumBall</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Kulki Newtona
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_pendulum_ball.html','','struct_pendulum_ball-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja struktury PendulumBall</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Reprezentuje pojedynczą kulkę Wahadła Newtona.  
+ <a href="#details">Więcej...</a></p>
+<div class="dynheader">
+Diagram współpracy dla PendulumBall:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_pendulum_ball__coll__graph.png" border="0" usemap="#a_pendulum_ball_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:aaee86a0b6cc2455ba2cbe3e783cbef59" id="r_aaee86a0b6cc2455ba2cbe3e783cbef59"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaee86a0b6cc2455ba2cbe3e783cbef59">update</a> (float dt)</td></tr>
+<tr class="memdesc:aaee86a0b6cc2455ba2cbe3e783cbef59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktualizuje stan fizyczny kulki.  <br /></td></tr>
+<tr class="memitem:af009f2680976446c3ee6e05beaae9fa7" id="r_af009f2680976446c3ee6e05beaae9fa7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af009f2680976446c3ee6e05beaae9fa7">draw</a> ()</td></tr>
+<tr class="memdesc:af009f2680976446c3ee6e05beaae9fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje kulkę oraz jej zawieszenie.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:a9a63379f16c678a6bed3ce14b6243e1a" id="r_a9a63379f16c678a6bed3ce14b6243e1a"><td class="memItemLeft">glm::vec3&#160;</td><td class="memItemRight"><a class="el" href="#a9a63379f16c678a6bed3ce14b6243e1a">pivot</a></td></tr>
+<tr class="memitem:af52df7538e51315fb3af96cdcfe71019" id="r_af52df7538e51315fb3af96cdcfe71019"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af52df7538e51315fb3af96cdcfe71019">length</a></td></tr>
+<tr class="memitem:a1026bba2d966561b674fcbc6f9c42b55" id="r_a1026bba2d966561b674fcbc6f9c42b55"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1026bba2d966561b674fcbc6f9c42b55">angle</a></td></tr>
+<tr class="memitem:af987eb19085a2f337d994068fc2ea2b4" id="r_af987eb19085a2f337d994068fc2ea2b4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af987eb19085a2f337d994068fc2ea2b4">angularVel</a></td></tr>
+<tr class="memitem:a05729cccc9060e34c57d291e9663cad6" id="r_a05729cccc9060e34c57d291e9663cad6"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a05729cccc9060e34c57d291e9663cad6">angularAcc</a></td></tr>
+<tr class="memitem:af3e941c334bad9b8a09f1b0bd0978095" id="r_af3e941c334bad9b8a09f1b0bd0978095"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af3e941c334bad9b8a09f1b0bd0978095">radius</a></td></tr>
+<tr class="memitem:a24d5145b62e21cd0497114e520d795c2" id="r_a24d5145b62e21cd0497114e520d795c2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a24d5145b62e21cd0497114e520d795c2">mass</a></td></tr>
+<tr class="memitem:a2a04b86ef14e79f849f672c24483edda" id="r_a2a04b86ef14e79f849f672c24483edda"><td class="memItemLeft">glm::vec3&#160;</td><td class="memItemRight"><a class="el" href="#a2a04b86ef14e79f849f672c24483edda">pos</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Reprezentuje pojedynczą kulkę Wahadła Newtona. </p>
+<p>Struktura zawiera wszystkie dane fizyczne i wizualne potrzebne do symulacji ruchu wahadła. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="af009f2680976446c3ee6e05beaae9fa7" name="af009f2680976446c3ee6e05beaae9fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af009f2680976446c3ee6e05beaae9fa7">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PendulumBall::draw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje kulkę oraz jej zawieszenie. </p>
+<p>Rysuje dwie nici oraz kulę 3D. </p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_pendulum_ball_af009f2680976446c3ee6e05beaae9fa7_cgraph.png" border="0" usemap="#astruct_pendulum_ball_af009f2680976446c3ee6e05beaae9fa7_cgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aaee86a0b6cc2455ba2cbe3e783cbef59" name="aaee86a0b6cc2455ba2cbe3e783cbef59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaee86a0b6cc2455ba2cbe3e783cbef59">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PendulumBall::update </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Aktualizuje stan fizyczny kulki. </p>
+<p>Implementuje równanie ruchu wahadła matematycznego z niewielkim tłumieniem.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>Krok czasowy symulacji </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a1026bba2d966561b674fcbc6f9c42b55" name="a1026bba2d966561b674fcbc6f9c42b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1026bba2d966561b674fcbc6f9c42b55">&#9670;&#160;</a></span>angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PendulumBall::angle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Aktualny kąt wychylenia </p>
+
+</div>
+</div>
+<a id="a05729cccc9060e34c57d291e9663cad6" name="a05729cccc9060e34c57d291e9663cad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05729cccc9060e34c57d291e9663cad6">&#9670;&#160;</a></span>angularAcc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PendulumBall::angularAcc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Przyspieszenie kątowe </p>
+
+</div>
+</div>
+<a id="af987eb19085a2f337d994068fc2ea2b4" name="af987eb19085a2f337d994068fc2ea2b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af987eb19085a2f337d994068fc2ea2b4">&#9670;&#160;</a></span>angularVel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PendulumBall::angularVel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Prędkość kątowa </p>
+
+</div>
+</div>
+<a id="af52df7538e51315fb3af96cdcfe71019" name="af52df7538e51315fb3af96cdcfe71019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af52df7538e51315fb3af96cdcfe71019">&#9670;&#160;</a></span>length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PendulumBall::length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Długość nici </p>
+
+</div>
+</div>
+<a id="a24d5145b62e21cd0497114e520d795c2" name="a24d5145b62e21cd0497114e520d795c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d5145b62e21cd0497114e520d795c2">&#9670;&#160;</a></span>mass</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PendulumBall::mass</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Masa kulki </p>
+
+</div>
+</div>
+<a id="a9a63379f16c678a6bed3ce14b6243e1a" name="a9a63379f16c678a6bed3ce14b6243e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a63379f16c678a6bed3ce14b6243e1a">&#9670;&#160;</a></span>pivot</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec3 PendulumBall::pivot</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Punkt zawieszenia kulki </p>
+
+</div>
+</div>
+<a id="a2a04b86ef14e79f849f672c24483edda" name="a2a04b86ef14e79f849f672c24483edda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a04b86ef14e79f849f672c24483edda">&#9670;&#160;</a></span>pos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec3 PendulumBall::pos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Aktualna pozycja kulki w przestrzeni </p>
+
+</div>
+</div>
+<a id="af3e941c334bad9b8a09f1b0bd0978095" name="af3e941c334bad9b8a09f1b0bd0978095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e941c334bad9b8a09f1b0bd0978095">&#9670;&#160;</a></span>radius</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PendulumBall::radius</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Promień kulki </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej struktury została wygenerowana z pliku:<ul>
+<li><a class="el" href="main_8cpp.html">main.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="struct_pendulum_ball.html">PendulumBall</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

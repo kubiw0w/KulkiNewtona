@@ -1,0 +1,8 @@
+﻿  main.cpp
+C:\Users\kubas\Desktop\projekty\FAGK.PROJEKT\main.cpp(38,20): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\kubas\Desktop\projekty\FAGK.PROJEKT\main.cpp(39,20): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\kubas\Desktop\projekty\FAGK.PROJEKT\main.cpp(47,23): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\kubas\Desktop\projekty\FAGK.PROJEKT\main.cpp(196,16): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\kubas\Desktop\projekty\FAGK.PROJEKT\main.cpp(197,16): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\kubas\Desktop\projekty\FAGK.PROJEKT\main.cpp(200,17): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+  KulkiNewtona.vcxproj -> C:\Users\kubas\Desktop\projekty\FAGK.PROJEKT\x64\Debug\KulkiNewtona.exe

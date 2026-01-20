@@ -1,0 +1,39 @@
+// glass_shader.cg
+
+struct VertexInput {
+    float4 position : POSITION;
+    float3 normal   : NORMAL;
+};
+
+struct VertexOutput {
+    float4 position : POSITION;
+    float3 normal   : TEXCOORD0;
+    float3 eyeVec   : TEXCOORD1;
+};
+
+VertexOutput glass_v(VertexInput IN, uniform float4x4 modelViewProj, uniform float4x4 modelView) {
+    VertexOutput OUT;
+    OUT.position = mul(modelViewProj, IN.position);
+
+    float4 eyePos = mul(modelView, IN.position);
+    OUT.eyeVec = normalize(-eyePos.xyz);
+
+    float3 normal = mul((float3x3)modelView, IN.normal);
+    OUT.normal = normalize(normal);
+
+    return OUT;
+}
+
+float4 glass_f(VertexOutput IN, uniform float3 lightDir) : COLOR {
+    float3 N = normalize(IN.normal);
+    float3 V = normalize(IN.eyeVec);
+    float3 R = reflect(-V, N);
+
+    float spec = pow(saturate(dot(R, lightDir)), 32.0);
+    float fresnel = pow(1.0 - dot(N, V), 3.0);
+
+    float4 glassColor = float4(0.6, 0.8, 1.0, 0.3); // niebieskawa szklistoœæ
+    float4 finalColor = glassColor + float4(spec, spec, spec, 0.0) * fresnel;
+
+    return saturate(finalColor);
+}

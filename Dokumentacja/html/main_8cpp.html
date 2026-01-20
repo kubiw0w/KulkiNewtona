@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kulki Newtona: Dokumentacja pliku main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Kulki Newtona
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('main_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja pliku main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Symulacja Wahadła Newtona w 3D z użyciem GLFW i OpenGL.  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &lt;GLFW/glfw3.h&gt;</code><br />
+<code>#include &lt;glm/glm.hpp&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;glm/gtc/matrix_transform.hpp&gt;</code><br />
+<code>#include &lt;glm/gtc/type_ptr.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#amain_8cpp" loading="lazy" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Komponenty</h2></td></tr>
+<tr class="memitem:PendulumBall" id="r_PendulumBall"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_pendulum_ball.html">PendulumBall</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reprezentuje pojedynczą kulkę Wahadła Newtona.  <a href="struct_pendulum_ball.html#details">Więcej...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:ae71449b1cc6e6250b91f539153a7a0d3" id="r_ae71449b1cc6e6250b91f539153a7a0d3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a>&#160;&#160;&#160;3.14159265358979323846</td></tr>
+<tr class="memdesc:ae71449b1cc6e6250b91f539153a7a0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stała matematyczna PI.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a5f3ea12a3834982d54bb6bf508e8a9d7" id="r_a5f3ea12a3834982d54bb6bf508e8a9d7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5f3ea12a3834982d54bb6bf508e8a9d7">drawSphere</a> (float radius, int slices, int stacks)</td></tr>
+<tr class="memdesc:a5f3ea12a3834982d54bb6bf508e8a9d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje kulę metodą parametryczną.  <br /></td></tr>
+<tr class="memitem:ad138d1423ad28bd244b08d18c202f101" id="r_ad138d1423ad28bd244b08d18c202f101"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad138d1423ad28bd244b08d18c202f101">drawDoubleFrame</a> (float startX, float endX, float topY, float baseY, float zOffset)</td></tr>
+<tr class="memdesc:ad138d1423ad28bd244b08d18c202f101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje podwójną ramę Wahadła Newtona.  <br /></td></tr>
+<tr class="memitem:a1a1bc6c87413e4a3dabbf3112e9fc04a" id="r_a1a1bc6c87413e4a3dabbf3112e9fc04a"><td class="memItemLeft">glm::vec3&#160;</td><td class="memItemRight"><a class="el" href="#a1a1bc6c87413e4a3dabbf3112e9fc04a">getMousePos</a> (GLFWwindow *window)</td></tr>
+<tr class="memdesc:a1a1bc6c87413e4a3dabbf3112e9fc04a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konwertuje pozycję kursora na współrzędne świata 3D.  <br /></td></tr>
+<tr class="memitem:ae41a3951e1196401047b29ad1d37c6ae" id="r_ae41a3951e1196401047b29ad1d37c6ae"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae41a3951e1196401047b29ad1d37c6ae">mouseButtonCallback</a> (GLFWwindow *window, int button, int action, int mods)</td></tr>
+<tr class="memdesc:ae41a3951e1196401047b29ad1d37c6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback obsługujący kliknięcia myszy.  <br /></td></tr>
+<tr class="memitem:a236175cc409c94a7a2d78d268dd3ca1c" id="r_a236175cc409c94a7a2d78d268dd3ca1c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a236175cc409c94a7a2d78d268dd3ca1c">resolvePendulumCollision</a> (<a class="el" href="struct_pendulum_ball.html">PendulumBall</a> &amp;a, <a class="el" href="struct_pendulum_ball.html">PendulumBall</a> &amp;b)</td></tr>
+<tr class="memdesc:a236175cc409c94a7a2d78d268dd3ca1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rozwiązuje kolizję pomiędzy dwiema kulkami.  <br /></td></tr>
+<tr class="memitem:a33fdaf02fb3a67b155c21714f74d8c33" id="r_a33fdaf02fb3a67b155c21714f74d8c33"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a33fdaf02fb3a67b155c21714f74d8c33">setupScene3D</a> ()</td></tr>
+<tr class="memdesc:a33fdaf02fb3a67b155c21714f74d8c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicjalizuje oświetlenie i test głębokości.  <br /></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Punkt wejścia programu.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:afd1da7d16cfacb88dbb584a6adc14a7d" id="r_afd1da7d16cfacb88dbb584a6adc14a7d"><td class="memItemLeft">std::vector&lt; <a class="el" href="struct_pendulum_ball.html">PendulumBall</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afd1da7d16cfacb88dbb584a6adc14a7d">balls</a></td></tr>
+<tr class="memitem:ac7285bf60dc89068354b900e82672078" id="r_ac7285bf60dc89068354b900e82672078"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac7285bf60dc89068354b900e82672078">dragging</a> = false</td></tr>
+<tr class="memitem:a4dd4d35215490159cd79c2209ae58596" id="r_a4dd4d35215490159cd79c2209ae58596"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4dd4d35215490159cd79c2209ae58596">draggedIndex</a> = -1</td></tr>
+<tr class="memitem:abfe1e571b0d0b38cd5dc47d2e8803db5" id="r_abfe1e571b0d0b38cd5dc47d2e8803db5"><td class="memItemLeft">glm::vec3&#160;</td><td class="memItemRight"><a class="el" href="#abfe1e571b0d0b38cd5dc47d2e8803db5">mousePos</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Symulacja Wahadła Newtona w 3D z użyciem GLFW i OpenGL. </p>
+<p>Program realizuje wizualną i fizyczną symulację Wahadła Newtona. Użytkownik może chwytać kulki myszką, przeciągać je i puszczać, inicjując ruch zgodny z zasadami zachowania pędu. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Dokumentacja definicji</h2>
+<a id="ae71449b1cc6e6250b91f539153a7a0d3" name="ae71449b1cc6e6250b91f539153a7a0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71449b1cc6e6250b91f539153a7a0d3">&#9670;&#160;</a></span>M_PI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define M_PI&#160;&#160;&#160;3.14159265358979323846</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stała matematyczna PI. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji</h2>
+<a id="ad138d1423ad28bd244b08d18c202f101" name="ad138d1423ad28bd244b08d18c202f101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad138d1423ad28bd244b08d18c202f101">&#9670;&#160;</a></span>drawDoubleFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawDoubleFrame </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>startX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>endX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>topY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>baseY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>zOffset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rysuje podwójną ramę Wahadła Newtona. </p>
+<p>Rama składa się z dwóch pionowych nóg oraz dwóch górnych poprzeczek przedniej i tylnej.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startX</td><td>Pozycja lewej nogi </td></tr>
+    <tr><td class="paramname">endX</td><td>Pozycja prawej nogi </td></tr>
+    <tr><td class="paramname">topY</td><td>Wysokość górnej belki </td></tr>
+    <tr><td class="paramname">baseY</td><td>Wysokość podstawy </td></tr>
+    <tr><td class="paramname">zOffset</td><td>Odsunięcie w osi Z </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_ad138d1423ad28bd244b08d18c202f101_icgraph.png" border="0" usemap="#amain_8cpp_ad138d1423ad28bd244b08d18c202f101_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5f3ea12a3834982d54bb6bf508e8a9d7" name="a5f3ea12a3834982d54bb6bf508e8a9d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3ea12a3834982d54bb6bf508e8a9d7">&#9670;&#160;</a></span>drawSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawSphere </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slices</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>stacks</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rysuje kulę metodą parametryczną. </p>
+<p>Funkcja generuje kulę wykorzystując współrzędne sferyczne i prymitywy GL_QUAD_STRIP.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius</td><td>Promień sfery </td></tr>
+    <tr><td class="paramname">slices</td><td>Liczba podziałów poziomych </td></tr>
+    <tr><td class="paramname">stacks</td><td>Liczba podziałów pionowych </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a5f3ea12a3834982d54bb6bf508e8a9d7_icgraph.png" border="0" usemap="#amain_8cpp_a5f3ea12a3834982d54bb6bf508e8a9d7_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a1a1bc6c87413e4a3dabbf3112e9fc04a" name="a1a1bc6c87413e4a3dabbf3112e9fc04a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a1bc6c87413e4a3dabbf3112e9fc04a">&#9670;&#160;</a></span>getMousePos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec3 getMousePos </td>
+          <td>(</td>
+          <td class="paramtype">GLFWwindow *</td>          <td class="paramname"><span class="paramname"><em>window</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konwertuje pozycję kursora na współrzędne świata 3D. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>Okno GLFW </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Pozycja myszy w przestrzeni świata </dd></dl>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a1a1bc6c87413e4a3dabbf3112e9fc04a_icgraph.png" border="0" usemap="#amain_8cpp_a1a1bc6c87413e4a3dabbf3112e9fc04a_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Punkt wejścia programu. </p>
+<p>Inicjalizuje GLFW, tworzy scenę, uruchamia pętlę renderującą oraz obsługuje interakcję użytkownika.</p>
+<dl class="section return"><dt>Zwraca</dt><dd>Kod zakończenia programu </dd></dl>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae41a3951e1196401047b29ad1d37c6ae" name="ae41a3951e1196401047b29ad1d37c6ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae41a3951e1196401047b29ad1d37c6ae">&#9670;&#160;</a></span>mouseButtonCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mouseButtonCallback </td>
+          <td>(</td>
+          <td class="paramtype">GLFWwindow *</td>          <td class="paramname"><span class="paramname"><em>window</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>button</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>action</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mods</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback obsługujący kliknięcia myszy. </p>
+<p>Umożliwia chwytanie i puszczanie kulek.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>Okno GLFW </td></tr>
+    <tr><td class="paramname">button</td><td>Przycisk myszy </td></tr>
+    <tr><td class="paramname">action</td><td>Akcja myszki </td></tr>
+    <tr><td class="paramname">mods</td><td>Modyfikatory klawiatury </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_ae41a3951e1196401047b29ad1d37c6ae_cgraph.png" border="0" usemap="#amain_8cpp_ae41a3951e1196401047b29ad1d37c6ae_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_ae41a3951e1196401047b29ad1d37c6ae_icgraph.png" border="0" usemap="#amain_8cpp_ae41a3951e1196401047b29ad1d37c6ae_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a236175cc409c94a7a2d78d268dd3ca1c" name="a236175cc409c94a7a2d78d268dd3ca1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a236175cc409c94a7a2d78d268dd3ca1c">&#9670;&#160;</a></span>resolvePendulumCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resolvePendulumCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_pendulum_ball.html">PendulumBall</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_pendulum_ball.html">PendulumBall</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rozwiązuje kolizję pomiędzy dwiema kulkami. </p>
+<p>Implementuje uproszczone zachowanie sprężyste na osi X.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Pierwsza kulka </td></tr>
+    <tr><td class="paramname">b</td><td>Druga kulka </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a236175cc409c94a7a2d78d268dd3ca1c_icgraph.png" border="0" usemap="#amain_8cpp_a236175cc409c94a7a2d78d268dd3ca1c_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a33fdaf02fb3a67b155c21714f74d8c33" name="a33fdaf02fb3a67b155c21714f74d8c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33fdaf02fb3a67b155c21714f74d8c33">&#9670;&#160;</a></span>setupScene3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setupScene3D </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicjalizuje oświetlenie i test głębokości. </p>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a33fdaf02fb3a67b155c21714f74d8c33_icgraph.png" border="0" usemap="#amain_8cpp_a33fdaf02fb3a67b155c21714f74d8c33_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Dokumentacja zmiennych</h2>
+<a id="afd1da7d16cfacb88dbb584a6adc14a7d" name="afd1da7d16cfacb88dbb584a6adc14a7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1da7d16cfacb88dbb584a6adc14a7d">&#9670;&#160;</a></span>balls</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_pendulum_ball.html">PendulumBall</a>&gt; balls</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Lista wszystkich kulek wahadła </p>
+
+</div>
+</div>
+<a id="a4dd4d35215490159cd79c2209ae58596" name="a4dd4d35215490159cd79c2209ae58596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd4d35215490159cd79c2209ae58596">&#9670;&#160;</a></span>draggedIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int draggedIndex = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Indeks aktualnie przeciąganej kulki </p>
+
+</div>
+</div>
+<a id="ac7285bf60dc89068354b900e82672078" name="ac7285bf60dc89068354b900e82672078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7285bf60dc89068354b900e82672078">&#9670;&#160;</a></span>dragging</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dragging = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Czy trwa przeciąganie kulki </p>
+
+</div>
+</div>
+<a id="abfe1e571b0d0b38cd5dc47d2e8803db5" name="abfe1e571b0d0b38cd5dc47d2e8803db5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe1e571b0d0b38cd5dc47d2e8803db5">&#9670;&#160;</a></span>mousePos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec3 mousePos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Aktualna pozycja myszy w przestrzeni </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="main_8cpp.html">main.cpp</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

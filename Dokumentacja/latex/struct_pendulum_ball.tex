@@ -1,0 +1,134 @@
+\doxysection{Dokumentacja struktury Pendulum\+Ball}
+\hypertarget{struct_pendulum_ball}{}\label{struct_pendulum_ball}\index{PendulumBall@{PendulumBall}}
+
+
+Reprezentuje pojedynczą kulkę Wahadła Newtona.  
+
+
+
+
+Diagram współpracy dla Pendulum\+Ball:\+
+% FIG 0
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{struct_pendulum_ball_aaee86a0b6cc2455ba2cbe3e783cbef59}{update}} (float dt)
+\begin{DoxyCompactList}\small\item\em Aktualizuje stan fizyczny kulki. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{struct_pendulum_ball_af009f2680976446c3ee6e05beaae9fa7}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Rysuje kulkę oraz jej zawieszenie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{struct_pendulum_ball_a9a63379f16c678a6bed3ce14b6243e1a}{pivot}}
+\item 
+float \doxymbox{\hyperlink{struct_pendulum_ball_af52df7538e51315fb3af96cdcfe71019}{length}}
+\item 
+float \doxymbox{\hyperlink{struct_pendulum_ball_a1026bba2d966561b674fcbc6f9c42b55}{angle}}
+\item 
+float \doxymbox{\hyperlink{struct_pendulum_ball_af987eb19085a2f337d994068fc2ea2b4}{angular\+Vel}}
+\item 
+float \doxymbox{\hyperlink{struct_pendulum_ball_a05729cccc9060e34c57d291e9663cad6}{angular\+Acc}}
+\item 
+float \doxymbox{\hyperlink{struct_pendulum_ball_af3e941c334bad9b8a09f1b0bd0978095}{radius}}
+\item 
+float \doxymbox{\hyperlink{struct_pendulum_ball_a24d5145b62e21cd0497114e520d795c2}{mass}}
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{struct_pendulum_ball_a2a04b86ef14e79f849f672c24483edda}{pos}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Reprezentuje pojedynczą kulkę Wahadła Newtona. 
+
+Struktura zawiera wszystkie dane fizyczne i wizualne potrzebne do symulacji ruchu wahadła. 
+
+\label{doc-func-members}
+\Hypertarget{struct_pendulum_ball_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{struct_pendulum_ball_af009f2680976446c3ee6e05beaae9fa7}\index{PendulumBall@{PendulumBall}!draw@{draw}}
+\index{draw@{draw}!PendulumBall@{PendulumBall}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{struct_pendulum_ball_af009f2680976446c3ee6e05beaae9fa7} 
+void Pendulum\+Ball::\+draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rysuje kulkę oraz jej zawieszenie. 
+
+Rysuje dwie nici oraz kulę 3D. Oto graf wywołań dla tej funkcji:\+
+% FIG 1
+\Hypertarget{struct_pendulum_ball_aaee86a0b6cc2455ba2cbe3e783cbef59}\index{PendulumBall@{PendulumBall}!update@{update}}
+\index{update@{update}!PendulumBall@{PendulumBall}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{struct_pendulum_ball_aaee86a0b6cc2455ba2cbe3e783cbef59} 
+void Pendulum\+Ball::\+update (\begin{DoxyParamCaption}\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Aktualizuje stan fizyczny kulki. 
+
+Implementuje równanie ruchu wahadła matematycznego z niewielkim tłumieniem.
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Krok czasowy symulacji \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_pendulum_ball_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{struct_pendulum_ball_a1026bba2d966561b674fcbc6f9c42b55}\index{PendulumBall@{PendulumBall}!angle@{angle}}
+\index{angle@{angle}!PendulumBall@{PendulumBall}}
+\doxysubsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily \label{struct_pendulum_ball_a1026bba2d966561b674fcbc6f9c42b55} 
+float Pendulum\+Ball::\+angle}
+
+Aktualny kąt wychylenia \Hypertarget{struct_pendulum_ball_a05729cccc9060e34c57d291e9663cad6}\index{PendulumBall@{PendulumBall}!angularAcc@{angularAcc}}
+\index{angularAcc@{angularAcc}!PendulumBall@{PendulumBall}}
+\doxysubsubsection{\texorpdfstring{angularAcc}{angularAcc}}
+{\footnotesize\ttfamily \label{struct_pendulum_ball_a05729cccc9060e34c57d291e9663cad6} 
+float Pendulum\+Ball::\+angular\+Acc}
+
+Przyspieszenie kątowe \Hypertarget{struct_pendulum_ball_af987eb19085a2f337d994068fc2ea2b4}\index{PendulumBall@{PendulumBall}!angularVel@{angularVel}}
+\index{angularVel@{angularVel}!PendulumBall@{PendulumBall}}
+\doxysubsubsection{\texorpdfstring{angularVel}{angularVel}}
+{\footnotesize\ttfamily \label{struct_pendulum_ball_af987eb19085a2f337d994068fc2ea2b4} 
+float Pendulum\+Ball::\+angular\+Vel}
+
+Prędkość kątowa \Hypertarget{struct_pendulum_ball_af52df7538e51315fb3af96cdcfe71019}\index{PendulumBall@{PendulumBall}!length@{length}}
+\index{length@{length}!PendulumBall@{PendulumBall}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily \label{struct_pendulum_ball_af52df7538e51315fb3af96cdcfe71019} 
+float Pendulum\+Ball::\+length}
+
+Długość nici \Hypertarget{struct_pendulum_ball_a24d5145b62e21cd0497114e520d795c2}\index{PendulumBall@{PendulumBall}!mass@{mass}}
+\index{mass@{mass}!PendulumBall@{PendulumBall}}
+\doxysubsubsection{\texorpdfstring{mass}{mass}}
+{\footnotesize\ttfamily \label{struct_pendulum_ball_a24d5145b62e21cd0497114e520d795c2} 
+float Pendulum\+Ball::\+mass}
+
+Masa kulki \Hypertarget{struct_pendulum_ball_a9a63379f16c678a6bed3ce14b6243e1a}\index{PendulumBall@{PendulumBall}!pivot@{pivot}}
+\index{pivot@{pivot}!PendulumBall@{PendulumBall}}
+\doxysubsubsection{\texorpdfstring{pivot}{pivot}}
+{\footnotesize\ttfamily \label{struct_pendulum_ball_a9a63379f16c678a6bed3ce14b6243e1a} 
+glm::\+vec3 Pendulum\+Ball::\+pivot}
+
+Punkt zawieszenia kulki \Hypertarget{struct_pendulum_ball_a2a04b86ef14e79f849f672c24483edda}\index{PendulumBall@{PendulumBall}!pos@{pos}}
+\index{pos@{pos}!PendulumBall@{PendulumBall}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily \label{struct_pendulum_ball_a2a04b86ef14e79f849f672c24483edda} 
+glm::\+vec3 Pendulum\+Ball::\+pos}
+
+Aktualna pozycja kulki w przestrzeni \Hypertarget{struct_pendulum_ball_af3e941c334bad9b8a09f1b0bd0978095}\index{PendulumBall@{PendulumBall}!radius@{radius}}
+\index{radius@{radius}!PendulumBall@{PendulumBall}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily \label{struct_pendulum_ball_af3e941c334bad9b8a09f1b0bd0978095} 
+float Pendulum\+Ball::\+radius}
+
+Promień kulki 
+
+Dokumentacja dla tej struktury została wygenerowana z pliku:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

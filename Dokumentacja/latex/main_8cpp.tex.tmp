@@ -1,0 +1,256 @@
+\doxysection{Dokumentacja pliku main.\+cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Symulacja Wahadła Newtona w 3D z użyciem GLFW i Open\+GL.  
+
+
+{\ttfamily \+\#include $<$GLFW/\+glfw3.\+h$>$}\newline
+{\ttfamily \+\#include $<$glm/\+glm.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$glm/\+gtc/\+matrix\+\_\+transform.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$glm/\+gtc/\+type\+\_\+ptr.\+hpp$>$}\newline
+Wykres zależności załączania dla main.\+cpp:\+
+% FIG 0
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_pendulum_ball}{Pendulum\+Ball}}
+\begin{DoxyCompactList}\small\item\em Reprezentuje pojedynczą kulkę Wahadła Newtona. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{main_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846
+\begin{DoxyCompactList}\small\item\em Stała matematyczna PI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{main_8cpp_a5f3ea12a3834982d54bb6bf508e8a9d7}{draw\+Sphere}} (float radius, int slices, int stacks)
+\begin{DoxyCompactList}\small\item\em Rysuje kulę metodą parametryczną. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8cpp_ad138d1423ad28bd244b08d18c202f101}{draw\+Double\+Frame}} (float startX, float endX, float topY, float baseY, float z\+Offset)
+\begin{DoxyCompactList}\small\item\em Rysuje podwójną ramę Wahadła Newtona. \end{DoxyCompactList}\item 
+glm::\+vec3 \doxymbox{\hyperlink{main_8cpp_a1a1bc6c87413e4a3dabbf3112e9fc04a}{get\+Mouse\+Pos}} (GLFWwindow \texorpdfstring{$\ast$}{*}window)
+\begin{DoxyCompactList}\small\item\em Konwertuje pozycję kursora na współrzędne świata 3D. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8cpp_ae41a3951e1196401047b29ad1d37c6ae}{mouse\+Button\+Callback}} (GLFWwindow \texorpdfstring{$\ast$}{*}window, int button, int action, int mods)
+\begin{DoxyCompactList}\small\item\em Callback obsługujący kliknięcia myszy. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8cpp_a236175cc409c94a7a2d78d268dd3ca1c}{resolve\+Pendulum\+Collision}} (\doxymbox{\hyperlink{struct_pendulum_ball}{Pendulum\+Ball}} \&a, \doxymbox{\hyperlink{struct_pendulum_ball}{Pendulum\+Ball}} \&b)
+\begin{DoxyCompactList}\small\item\em Rozwiązuje kolizję pomiędzy dwiema kulkami. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8cpp_a33fdaf02fb3a67b155c21714f74d8c33}{setup\+Scene3D}} ()
+\begin{DoxyCompactList}\small\item\em Inicjalizuje oświetlenie i test głębokości. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Punkt wejścia programu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_pendulum_ball}{Pendulum\+Ball}} $>$ \doxymbox{\hyperlink{main_8cpp_afd1da7d16cfacb88dbb584a6adc14a7d}{balls}}
+\item 
+bool \doxymbox{\hyperlink{main_8cpp_ac7285bf60dc89068354b900e82672078}{dragging}} = false
+\item 
+int \doxymbox{\hyperlink{main_8cpp_a4dd4d35215490159cd79c2209ae58596}{dragged\+Index}} = -\/1
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{main_8cpp_abfe1e571b0d0b38cd5dc47d2e8803db5}{mouse\+Pos}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Symulacja Wahadła Newtona w 3D z użyciem GLFW i Open\+GL. 
+
+Program realizuje wizualną i fizyczną symulację Wahadła Newtona. Użytkownik może chwytać kulki myszką, przeciągać je i puszczać, inicjując ruch zgodny z zasadami zachowania pędu. 
+
+\label{doc-define-members}
+\Hypertarget{main_8cpp_doc-define-members}
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{main_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}\index{main.cpp@{main.cpp}!M\_PI@{M\_PI}}
+\index{M\_PI@{M\_PI}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{M\_PI}{M\_PI}}
+{\footnotesize\ttfamily \label{main_8cpp_ae71449b1cc6e6250b91f539153a7a0d3} 
+\+\#define M\+\_\+\+PI~3.\+14159265358979323846}
+
+
+
+Stała matematyczna PI. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{main_8cpp_ad138d1423ad28bd244b08d18c202f101}\index{main.cpp@{main.cpp}!drawDoubleFrame@{drawDoubleFrame}}
+\index{drawDoubleFrame@{drawDoubleFrame}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{drawDoubleFrame()}{drawDoubleFrame()}}
+{\footnotesize\ttfamily \label{main_8cpp_ad138d1423ad28bd244b08d18c202f101} 
+void draw\+Double\+Frame (\begin{DoxyParamCaption}\item[{float}]{startX}{, }\item[{float}]{endX}{, }\item[{float}]{topY}{, }\item[{float}]{baseY}{, }\item[{float}]{z\+Offset}{}\end{DoxyParamCaption})}
+
+
+
+Rysuje podwójną ramę Wahadła Newtona. 
+
+Rama składa się z dwóch pionowych nóg oraz dwóch górnych poprzeczek przedniej i tylnej.
+
+
+\begin{DoxyParams}{Parametry}
+{\em startX} & Pozycja lewej nogi \\
+\hline
+{\em endX} & Pozycja prawej nogi \\
+\hline
+{\em topY} & Wysokość górnej belki \\
+\hline
+{\em baseY} & Wysokość podstawy \\
+\hline
+{\em z\+Offset} & Odsunięcie w osi Z \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji:\+
+% FIG 1
+\Hypertarget{main_8cpp_a5f3ea12a3834982d54bb6bf508e8a9d7}\index{main.cpp@{main.cpp}!drawSphere@{drawSphere}}
+\index{drawSphere@{drawSphere}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{drawSphere()}{drawSphere()}}
+{\footnotesize\ttfamily \label{main_8cpp_a5f3ea12a3834982d54bb6bf508e8a9d7} 
+void draw\+Sphere (\begin{DoxyParamCaption}\item[{float}]{radius}{, }\item[{int}]{slices}{, }\item[{int}]{stacks}{}\end{DoxyParamCaption})}
+
+
+
+Rysuje kulę metodą parametryczną. 
+
+Funkcja generuje kulę wykorzystując współrzędne sferyczne i prymitywy GL\+\_\+\+QUAD\+\_\+\+STRIP.
+
+
+\begin{DoxyParams}{Parametry}
+{\em radius} & Promień sfery \\
+\hline
+{\em slices} & Liczba podziałów poziomych \\
+\hline
+{\em stacks} & Liczba podziałów pionowych \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji:\+
+% FIG 2
+\Hypertarget{main_8cpp_a1a1bc6c87413e4a3dabbf3112e9fc04a}\index{main.cpp@{main.cpp}!getMousePos@{getMousePos}}
+\index{getMousePos@{getMousePos}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{getMousePos()}{getMousePos()}}
+{\footnotesize\ttfamily \label{main_8cpp_a1a1bc6c87413e4a3dabbf3112e9fc04a} 
+glm::\+vec3 get\+Mouse\+Pos (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window}{}\end{DoxyParamCaption})}
+
+
+
+Konwertuje pozycję kursora na współrzędne świata 3D. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & Okno GLFW \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Pozycja myszy w przestrzeni świata 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji:\+
+% FIG 3
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Punkt wejścia programu. 
+
+Inicjalizuje GLFW, tworzy scenę, uruchamia pętlę renderującą oraz obsługuje interakcję użytkownika.
+
+\begin{DoxyReturn}{Zwraca}
+Kod zakończenia programu 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji:\+
+% FIG 4
+\Hypertarget{main_8cpp_ae41a3951e1196401047b29ad1d37c6ae}\index{main.cpp@{main.cpp}!mouseButtonCallback@{mouseButtonCallback}}
+\index{mouseButtonCallback@{mouseButtonCallback}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mouseButtonCallback()}{mouseButtonCallback()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae41a3951e1196401047b29ad1d37c6ae} 
+void mouse\+Button\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window}{, }\item[{int}]{button}{, }\item[{int}]{action}{, }\item[{int}]{mods}{}\end{DoxyParamCaption})}
+
+
+
+Callback obsługujący kliknięcia myszy. 
+
+Umożliwia chwytanie i puszczanie kulek.
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & Okno GLFW \\
+\hline
+{\em button} & Przycisk myszy \\
+\hline
+{\em action} & Akcja myszki \\
+\hline
+{\em mods} & Modyfikatory klawiatury \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji:\+
+% FIG 5
+Oto graf wywoływań tej funkcji:\+
+% FIG 6
+\Hypertarget{main_8cpp_a236175cc409c94a7a2d78d268dd3ca1c}\index{main.cpp@{main.cpp}!resolvePendulumCollision@{resolvePendulumCollision}}
+\index{resolvePendulumCollision@{resolvePendulumCollision}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{resolvePendulumCollision()}{resolvePendulumCollision()}}
+{\footnotesize\ttfamily \label{main_8cpp_a236175cc409c94a7a2d78d268dd3ca1c} 
+void resolve\+Pendulum\+Collision (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_pendulum_ball}{Pendulum\+Ball}} \&}]{a}{, }\item[{\doxymbox{\hyperlink{struct_pendulum_ball}{Pendulum\+Ball}} \&}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Rozwiązuje kolizję pomiędzy dwiema kulkami. 
+
+Implementuje uproszczone zachowanie sprężyste na osi X.
+
+
+\begin{DoxyParams}{Parametry}
+{\em a} & Pierwsza kulka \\
+\hline
+{\em b} & Druga kulka \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji:\+
+% FIG 7
+\Hypertarget{main_8cpp_a33fdaf02fb3a67b155c21714f74d8c33}\index{main.cpp@{main.cpp}!setupScene3D@{setupScene3D}}
+\index{setupScene3D@{setupScene3D}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{setupScene3D()}{setupScene3D()}}
+{\footnotesize\ttfamily \label{main_8cpp_a33fdaf02fb3a67b155c21714f74d8c33} 
+void setup\+Scene3D (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Inicjalizuje oświetlenie i test głębokości. 
+
+Oto graf wywoływań tej funkcji:\+
+% FIG 8
+
+
+\label{doc-var-members}
+\Hypertarget{main_8cpp_doc-var-members}
+\doxysubsection{Dokumentacja zmiennych}
+\Hypertarget{main_8cpp_afd1da7d16cfacb88dbb584a6adc14a7d}\index{main.cpp@{main.cpp}!balls@{balls}}
+\index{balls@{balls}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{balls}{balls}}
+{\footnotesize\ttfamily \label{main_8cpp_afd1da7d16cfacb88dbb584a6adc14a7d} 
+std::\+vector$<$\doxymbox{\hyperlink{struct_pendulum_ball}{Pendulum\+Ball}}$>$ balls}
+
+Lista wszystkich kulek wahadła \Hypertarget{main_8cpp_a4dd4d35215490159cd79c2209ae58596}\index{main.cpp@{main.cpp}!draggedIndex@{draggedIndex}}
+\index{draggedIndex@{draggedIndex}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{draggedIndex}{draggedIndex}}
+{\footnotesize\ttfamily \label{main_8cpp_a4dd4d35215490159cd79c2209ae58596} 
+int dragged\+Index = -\/1}
+
+Indeks aktualnie przeciąganej kulki \Hypertarget{main_8cpp_ac7285bf60dc89068354b900e82672078}\index{main.cpp@{main.cpp}!dragging@{dragging}}
+\index{dragging@{dragging}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{dragging}{dragging}}
+{\footnotesize\ttfamily \label{main_8cpp_ac7285bf60dc89068354b900e82672078} 
+bool dragging = false}
+
+Czy trwa przeciąganie kulki \Hypertarget{main_8cpp_abfe1e571b0d0b38cd5dc47d2e8803db5}\index{main.cpp@{main.cpp}!mousePos@{mousePos}}
+\index{mousePos@{mousePos}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mousePos}{mousePos}}
+{\footnotesize\ttfamily \label{main_8cpp_abfe1e571b0d0b38cd5dc47d2e8803db5} 
+glm::\+vec3 mouse\+Pos}
+
+Aktualna pozycja myszy w przestrzeni 

@@ -1,6 +1,5 @@
 <h3 align="center">Newton's Cradle created in C++ using the GLFW and GLM (OpenGL) libraries.</h3>
 
-<h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>
 
